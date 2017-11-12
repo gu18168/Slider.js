@@ -1,0 +1,29 @@
+#index-wrapper {
+    display: none;
+    z-index: 3;
+    height: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#index-wrapper .index {
+    opacity: .5;
+    width: 32px;
+    height: 4px;
+    background: #B4BCCC;
+    margin: 0 10px;
+}
+
+#index-wrapper .index.active {
+    opacity: 1;
+    background: #878D99;
+}
+
+#index-wrapper .index:first-of-type {
+    margin-left: 0;
+}
+
+#index-wrapper .index:last-of-type {
+    margin-right: 0;
+}

@@ -1,0 +1,21 @@
+.now {
+    z-index: 2;
+    transform: scale(1.4);
+}
+
+.left {
+    transform: scale(1.2);
+}
+
+.right {
+    z-index: 1;
+    transform: scale(1.2);
+}
+
+.lleft {
+    transform: scale(1.0);
+}
+
+.rright {
+    transform: scale(1.0);
+}

@@ -1,0 +1,13 @@
+.now {
+    z-index: 2;
+    transform: scale(1.2);
+}
+
+.left {
+    transform: scale(1);
+}
+
+.right {
+    z-index: 1;
+    transform: scale(1);
+}

@@ -1,0 +1,28 @@
+var config = {
+    "num": 5,
+    "shownum": 5,
+    "rate": 0.2,
+    "bg": [
+        {
+            "src": "img/bg1.jpg"
+        },
+        {
+            "src": "img/bg2.jpg"
+        },
+        {
+            "src": "img/bg3.jpg"
+        },
+        {
+            "src": "img/bg4.jpg"
+        },
+        {
+            "src": "img/bg5.jpg"
+        }
+    ],
+    "autoplay": false,
+    "autotime": 2000,
+    "indicator": true,
+    "btn": true,
+    "deltaTime": 5000,
+    "deltaX": 50
+}

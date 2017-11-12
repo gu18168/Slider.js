@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'slider';
+  src:  url('../fonts/slider.eot?1u6c2r');
+  src : url('../fonts/slider.eot?1u6c2r#iefix') format('embedded-opentype'),
+    url('../fonts/slider.ttf?1u6c2r') format('truetype'),
+    url('../fonts/slider.woff?1u6c2r') format('woff'),
+    url('../fonts/slider.svg?1u6c2r#slider') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'slider' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow_right:before {
+  content: "\e900";
+}
+.icon-arrow_left:before {
+  content: "\e901";
+}
