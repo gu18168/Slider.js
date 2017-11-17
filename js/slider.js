@@ -48,6 +48,12 @@ var slider = {
         if (!config.btn) {
             helper.changeStyle(document.getElementById('btn-wrapper'), 'display', 'none');
         } else {
+            document.getElementById('container').addEventListener('mouseover', function () {
+                helper.addClass(document.getElementById('btn-wrapper'), 'active');
+            });
+            document.getElementById('container').addEventListener('mouseout', function () {
+                helper.removeClass(document.getElementById('btn-wrapper'), 'active');
+            });
             document.getElementById('lfb').addEventListener('click', slider.pre);
             document.getElementById('rfb').addEventListener('click', slider.next);
         }
@@ -204,7 +210,7 @@ var slider = {
         }
     },
     autoplay: function () {
-        helper.removeClass(document.getElementById('btn-wrapper'), 'active');
+        
         slider.autoid = setInterval(function () {
             slider.slide(slider.swipeData.currentPage + 1);
         }, config.autotime);

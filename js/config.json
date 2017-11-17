@@ -19,8 +19,8 @@ var config = {
             "src": "img/bg5.jpg"
         }
     ],
-    "autoplay": false,
-    "autotime": 2000,
+    "autoplay": true,
+    "autotime": 3000,
     "indicator": true,
     "btn": true,
     "deltaTime": 5000,
