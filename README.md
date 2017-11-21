@@ -3,6 +3,13 @@ a universal slider(or called carousel) component
 
 一个通用的轮播图（或走马灯）组件
 
+## 更新中...
+
+* bg 增强
+* 凸显模式增加
+* btn显示模式增加
+* 自定义template
+
 ## 配置说明
 
 你只需要下载组件，并将文件复制到你的项目中，注意 `html` 文件中 `<body>` 标签内的内容都是必须的，并配置相应的参数到 `config.json` 内即可使用该组件。
