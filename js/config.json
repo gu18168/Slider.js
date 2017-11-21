@@ -1,7 +1,4 @@
 var config = {
-    "num": 5,
-    "shownum": 5,
-    "rate": 0.2,
     "bg": [
         {
             "src": "img/bg1.jpg"
@@ -19,10 +16,13 @@ var config = {
             "src": "img/bg5.jpg"
         }
     ],
-    "autoplay": true,
+    "shownum": 5,
+    "rate": 0.2,
+    "autoplay": false,
     "autotime": 3000,
     "indicator": true,
     "btn": true,
+    "touchable": true,
     "deltaTime": 5000,
     "deltaX": 50
 }

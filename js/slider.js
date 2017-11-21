@@ -14,7 +14,7 @@ var slider = {
         let card = document.querySelector('#card-tpl');
         let index = document.querySelector('#index-tpl');
         // first load the bg
-        for (let i = 0; i < config.num; i++) {
+        for (let i = 0; i < config.bg.length; i++) {
             card.content.querySelector('img').src = config.bg[i].src;
             document.getElementById('swipe').appendChild(card.content.cloneNode(true));
         }
@@ -22,16 +22,18 @@ var slider = {
         slider.swipeData.addnum = Math.ceil(config.shownum / 2);
         for (let i = 0; i < slider.swipeData.addnum; i++) {
             // add extra head
-            card.content.querySelector('img').src = config.bg[config.num - i - 1].src;
+            card.content.querySelector('img').src = config.bg[config.bg.length - i - 1].src;
             document.getElementById('swipe').insertBefore(card.content.cloneNode(true), document.getElementsByClassName('card-wrapper')[0]);
             // add extra tail
             card.content.querySelector('img').src = config.bg[i].src;
             document.getElementById('swipe').appendChild(card.content.cloneNode(true));
         }
         // add touch listener
-        helper.on(document.getElementsByClassName('card-wrapper'), 'touchmove', slider.swipeMove);
-        helper.on(document.getElementsByClassName('card-wrapper'), 'touchstart', slider.swipeStart);
-        helper.on(document.getElementsByClassName('card-wrapper'), 'touchend', slider.swipeEnd);
+        if (config.touchable) {
+            helper.on(document.getElementsByClassName('card-wrapper'), 'touchmove', slider.swipeMove);
+            helper.on(document.getElementsByClassName('card-wrapper'), 'touchstart', slider.swipeStart);
+            helper.on(document.getElementsByClassName('card-wrapper'), 'touchend', slider.swipeEnd);
+        }
         // add mouse listener
         if (config.autoplay) {
             document.getElementById('container').addEventListener('mouseover', slider.clearauto);
@@ -40,7 +42,7 @@ var slider = {
         // add index
         if (config.indicator) {
             helper.changeStyle(document.getElementById('index-wrapper'), 'display', 'flex');
-            for (let i = 0; i < config.num; i++) {
+            for (let i = 0; i < config.bg.length; i++) {
                 document.getElementById('index-wrapper').appendChild(index.content.cloneNode(true));
             }
         }
@@ -141,7 +143,7 @@ var slider = {
         }
     },
     next: function () {
-        if (slider.swipeData.currentPage < slider.swipeData.addnum + config.num) {
+        if (slider.swipeData.currentPage < slider.swipeData.addnum + config.bg.length) {
             slider.swipeData.currentPage += 1;
             slider.slide();
         }
@@ -166,7 +168,7 @@ var slider = {
             setTimeout(function () {
                 slider.rollup();
             }, 300);
-        } else if (slider.swipeData.currentPage === slider.swipeData.addnum + config.num) {
+        } else if (slider.swipeData.currentPage === slider.swipeData.addnum + config.bg.length) {
             setTimeout(function () {
                 slider.rollback();
             }, 300);
@@ -175,7 +177,7 @@ var slider = {
         }
     },
     rollup: function () {
-        slider.swipeData.currentPage = slider.swipeData.addnum + config.num - 1;
+        slider.swipeData.currentPage = slider.swipeData.addnum + config.bg.length - 1;
         helper.changeStyle(document.getElementById('swipe'), 'transitionDuration', '0ms');
         
         let $sliderChildren = document.getElementsByClassName('card-wrapper');
