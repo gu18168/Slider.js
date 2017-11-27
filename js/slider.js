@@ -16,6 +16,7 @@ var slider = {
         // first load the bg
         for (let i = 0; i < config.bg.length; i++) {
             card.content.querySelector('img').src = config.bg[i].src;
+            card.content.querySelector('p').innerHTML = config.bg[i].title;
             document.getElementById('swipe').appendChild(card.content.cloneNode(true));
         }
         // add extra head and tail
@@ -23,9 +24,11 @@ var slider = {
         for (let i = 0; i < slider.swipeData.addnum; i++) {
             // add extra head
             card.content.querySelector('img').src = config.bg[config.bg.length - i - 1].src;
+            card.content.querySelector('p').innerHTML = config.bg[config.bg.length - i - 1].title;
             document.getElementById('swipe').insertBefore(card.content.cloneNode(true), document.getElementsByClassName('card-wrapper')[0]);
             // add extra tail
             card.content.querySelector('img').src = config.bg[i].src;
+            card.content.querySelector('p').innerHTML = config.bg[i].title;
             document.getElementById('swipe').appendChild(card.content.cloneNode(true));
         }
         // add touch listener

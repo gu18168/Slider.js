@@ -1,22 +1,27 @@
 var config = {
     "bg": [
         {
-            "src": "img/bg1.jpg"
+            "src": "img/bg1.jpg",
+            "title": "bg1"
         },
         {
-            "src": "img/bg2.jpg"
+            "src": "img/bg2.jpg",
+            "title": "bg2"
         },
         {
-            "src": "img/bg3.jpg"
+            "src": "img/bg3.jpg",
+            "title": "bg3"
         },
         {
-            "src": "img/bg4.jpg"
+            "src": "img/bg4.jpg",
+            "title": "bg4"
         },
         {
-            "src": "img/bg5.jpg"
+            "src": "img/bg5.jpg",
+            "title": "bg5"
         }
     ],
-    "shownum": 5,
+    "shownum": 1,
     "rate": 0.2,
     "autoplay": false,
     "autotime": 3000,
