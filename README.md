@@ -5,6 +5,7 @@ a universal slider(or called carousel) component
 
 ## 更新中...
 
+* <del> bg标题显示 </del>
 * bg 增强
 * 凸显模式增加
 * btn显示模式增加
